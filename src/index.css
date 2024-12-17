@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active{
+  color: rgb(119, 39, 39);
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.selected a{
+  background: #000;
+  color: #ffffff;
+}
