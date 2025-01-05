@@ -9,11 +9,11 @@ import Data from '../data'
 function Items({ currentItems }) {
 
   return (
-    <Flex className={'gap-x-10 flex-wrap'}>
+    <Flex className={'gap-x-10 flex-wrap laptop:gap-x-4'}>
       {currentItems &&
         currentItems.map((item) => (
-          <div className='pt-16'>
-            <div className='w-[273px] bg-white relative group'>
+          <div className='pt-16 android:ml-[100px] android:pt-[30px] mobile:pt-[20px] '>
+            <div className='w-[273px] laptop:w-[225px] tablet:w-[231px] android:w-[260px] mobile:w-full bg-white relative group'>
               <Product
                 imgSrc={item.image}
                 badge={item.badge}
@@ -50,8 +50,8 @@ function Pagination({ itemsPerPage }) {
   return (
     <>
       <Items currentItems={currentItems} />
-      <div className='pt-[50px] flex justify-between'>
-      <ReactPaginate
+      <div className='pt-[50px] tablet:text-[12px] tablet:items-center android:flex-wrap android:text-[12px] mobile:text-[12px] mobile:flex-wrap flex justify-between'>
+        <ReactPaginate
         breakLabel="..."
         nextLabel=""
         onPageChange={handlePageClick}
@@ -60,9 +60,9 @@ function Pagination({ itemsPerPage }) {
         previousLabel=""
         renderOnZeroPageCount={null}
         containerClassName="flex gap-x-4"
-        pageLinkClassName="bg-white text-TextColor p-3 border-2 border-BorderInfoColor"
+        pageLinkClassName="bg-white text-TextColor p-3 tablet:p-2 android:p-[7px] mobile:p-[5px] border-2 border-BorderInfoColor"
       />
-        <h2>{`Products from ${itemOffset+1} to ${endOffset<Data.length?endOffset:Data.length} of ${Data.length}`}</h2>
+        <h2 className='tablet:pr-[29px] android:pl-4 android:pt-5 android:text-[16px] mobile:text-[15px] mobile:pl-[18px] mobile:pt-[20px] '>{`Products from ${itemOffset+1} to ${endOffset<Data.length?endOffset:Data.length} of ${Data.length}`}</h2>
       </div>
     </>
   );

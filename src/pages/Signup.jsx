@@ -15,8 +15,8 @@ const Signup = () => {
         
         {/* Signup Header Part Start */}
         <div>
-          <Heading as={'h3'} className={'text-TextHColor text-[49px] font-dms font-bold'} text={'Sign up'} />
-          <Flex className={'items-center gap-x-2'}>
+          <Heading as={'h3'} className={'text-TextHColor text-[49px] font-dms font-bold mobile:text-center'} text={'Sign up'} />
+          <Flex className={'items-center gap-x-2 mobile:justify-center'}>
             <Link to={'/'}>
             <Heading as={'h5'} className={'font-dms text-TextColor text-[12px]'} text={'Home'} />
             </Link>
@@ -29,30 +29,30 @@ const Signup = () => {
         {/* Signup Header Part End */}
 
         {/* Signup Description Text Part Start */}
-        <div className='pt-[100px]'>
-          <Text className={'font-dms text-TextColor text-[16px] pr-[545px] pb-10 border-b'} text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the."} />
+        <div className='pt-[100px] mobile:w-full mobile:text-center'>
+          <Text className={'font-dms text-TextColor text-[16px] pr-[545px] tablet:pr-[445px] android:pr-[240px] pb-10 border-b mobile:pr-[0px]'} text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the."} />
         </div>
         {/* Signup Description Text Part End */}
 
         {/* Signup Personal Details Form Part Start */}
-        <div className='pt-[50px]'>
-          <Text className={'font-dms font-bold text-TextHColor text-[39px]'} text={"Your Personal Details"} />
+        <div className='pt-[50px] mobile:w-full'>
+          <Text className={'font-dms font-bold text-TextHColor text-[39px] mobile:text-[30px]'} text={"Your Personal Details"} />
           <Flex className='pt-[30px]'>
-          <div className='w-1/3'>
+          <div className='w-1/3 mobile:w-[45%]'>
           <label for="username" className="text-TextHColor text-[16px] font-dms font-bold">First Name *</label>
           <input className='w-full pb-4 pt-3 border-b' type="text" placeholder='First Name'/>
           </div>
-          <div className='w-1/3 pl-10'>
+          <div className='w-1/3 mobile:w-[45%] pl-10 mobile:pl-5'>
           <label for="username" className="text-TextHColor text-[16px] font-dms font-bold">Last Name *</label>
           <input className='w-full pb-4 pt-3 border-b' type="text" placeholder='Last Name'/>
           </div>
           </Flex>
           <Flex className='pt-[30px]'>
-          <div className='w-1/3'>
+          <div className='w-1/3 mobile:w-[45%]'>
           <label for="username" className="text-TextHColor text-[16px] font-dms font-bold">Email address</label>
           <input className='w-full pb-4 pt-3 border-b' type="email" placeholder='company@domain.com'/>
           </div>
-          <div className='w-1/3 pl-10'>
+          <div className='w-1/3 mobile:w-[45%] pl-10 mobile:pl-5'>
           <label for="username" className="text-TextHColor text-[16px] font-dms font-bold">Telephone</label>
           <input className='w-full pb-4 pt-3 border-b' type="number" placeholder='Your phone number'/>
           </div>
@@ -61,34 +61,34 @@ const Signup = () => {
         {/* Signup Personal Details Form Part End */}
 
         {/* New Customer Form Part Start */}
-        <div className='mt-[80px] pt-[30px] border-t'>
-          <Text className={'font-dms font-bold text-TextHColor text-[39px]'} text={"New Customer"} />
+        <div className='mt-[80px] pt-[30px] mobile:w-full border-t'>
+          <Text className={'font-dms font-bold text-TextHColor text-[39px] mobile:text-center mobile:text-[35px]'} text={"New Customer"} />
           <Flex className='pt-[30px]'>
-          <div className='w-1/3'>
+          <div className='w-1/3 mobile:w-[45%]'>
           <label for="username" className="text-TextHColor text-[16px] font-dms font-bold">Address 1</label>
           <input className='w-full pb-4 pt-3 border-b' type="text" placeholder='4279 Zboncak Port Suite 6212'/>
           </div>
-          <div className='w-1/3 pl-10'>
+          <div className='w-1/3 mobile:w-[45%] mobile:pl-5 pl-10'>
           <label for="username" className="text-TextHColor text-[16px] font-dms font-bold">Address 2</label>
           <input className='w-full pb-4 pt-3 border-b' type="text" placeholder='-'/>
           </div>
           </Flex>
           <Flex className='pt-[30px]'>
-          <div className='w-1/3'>
+          <div className='w-1/3 mobile:w-[45%]'>
           <label for="username" className="text-TextHColor text-[16px] font-dms font-bold">City</label>
           <input className='w-full pb-4 pt-3 border-b' type="text" placeholder='Your city'/>
           </div>
-          <div className='w-1/3 pl-10'>
+          <div className='w-1/3 mobile:w-[45%] mobile:pl-5  pl-10'>
           <label for="username" className="text-TextHColor text-[16px] font-dms font-bold">Post Code</label>
           <input className='w-full pb-4 pt-3 border-b' type="number" placeholder='05228'/>
           </div>
           </Flex>
           <Flex className='pt-[30px]'>
-          <div className='w-1/3 relative'>
+          <div className='w-1/3 mobile:w-[45%] relative'>
           <label for="username" className="text-TextHColor text-[16px] font-dms font-bold">Country</label>
           <input className='w-full pb-4 pt-3 border-b' type="text" placeholder='Please select'/><TiArrowSortedDown className='absolute top-[55%] right-5 text-TextColor'/>
           </div>
-          <div className='w-1/3 pl-10 relative'>
+          <div className='w-1/3 mobile:w-[45%] mobile:pl-5 pl-10 relative'>
           <label for="username" className="text-TextHColor text-[16px] font-dms font-bold">Region/State</label>
           <input className='w-full pb-4 pt-3 border-b' type="number" placeholder='Please select'/><TiArrowSortedDown className='absolute top-[55%] right-5 text-TextColor'/>
           </div>
@@ -97,15 +97,15 @@ const Signup = () => {
         {/* New Customer Form Part End */}
 
         {/* Password Form Part Start */}
-        <div className='pt-[50px] mt-[80px] border-t'>
-          <Text className={'font-dms font-bold text-TextHColor text-[39px]'} text={"Your Password"} />
+        <div className='pt-[50px] mt-[80px] mobile:w-full border-t'>
+          <Text className={'font-dms font-bold text-TextHColor mobile:text-center mobile:text-[35px] text-[39px]'} text={"Your Password"} />
           <Flex className='pt-[30px]'>
-          <div className='w-1/3'>
-          <label for="username" className="text-TextHColor text-[16px] font-dms font-bold">Password</label>
+          <div className='w-1/3 mobile:w-[45%]'>
+          <label for="username" className="text-TextHColor text-[16px] mobile:text-[12px] font-dms font-bold">Password</label>
           <input className='w-full pb-4 pt-3 border-b' type="password" placeholder='Password'/>
           </div>
-          <div className='w-1/3 pl-10'>
-          <label for="username" className="text-TextHColor text-[16px] font-dms font-bold">Repeat Password</label>
+          <div className='w-1/3 mobile:w-[45%] mobile:pl-5 pl-10'>
+          <label for="username" className="text-TextHColor text-[16px] mobile:text-[12px] font-dms font-bold">Repeat Password</label>
           <input className='w-full pb-4 pt-3 border-b' type="password" placeholder='Repeat password'/>
           </div>
           </Flex>
@@ -125,7 +125,7 @@ const Signup = () => {
             <label className="text-TextColor text-[14px] font-dms">No</label>
           </Flex>
           <Anchor href={'#'}>
-            <button className={'font-dms font-bold text-[14px] text-white bg-black inline-block py-4 px-[70px] mt-8'} type='button'>Sign up</button>
+            <button className={'font-dms font-bold text-[14px] text-white bg-black inline-block py-4 px-[70px] mt-8 mobile:ml-[60px]'} type='button'>Sign up</button>
         </Anchor>
         </div>
         {/* Password Form Part End */}

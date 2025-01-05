@@ -12,3 +12,9 @@ a.active{
   background: #000;
   color: #ffffff;
 }
+
+.acmenuone a.active{
+  color: rgb(106, 106, 106);
+  font-weight: 900;
+  font-size: 15px;
+}

@@ -9,11 +9,11 @@ const Account = () => {
 
   return (
     <>
-    <div className={'w-1/3 py-[120px]'}>
+    <div className={'w-1/3 mobile:w-full py-[120px]'}>
         {/* Account Header Part Start */}
         <div>
-          <Heading as={'h3'} className={'text-TextHColor text-[49px] font-dms font-bold'} text={'My Account'} />
-          <Flex className={'items-center gap-x-2'}>
+          <Heading as={'h3'} className={'text-TextHColor text-[49px] tablet:text-[44px] android:text-[32px] font-dms font-bold mobile:text-center'} text={'My Account'} />
+          <Flex className={'items-center gap-x-2 mobile:justify-center'}>
             <Link to={'/'}>
             <Heading as={'h5'} className={'font-dms text-TextColor text-[12px]'} text={'Home'} />
             </Link>
@@ -26,34 +26,34 @@ const Account = () => {
         {/* Account Header Part End */}
 
         {/* Account Menu Part Start */}
-        <div className='w-[250px] pt-[100px] rounded-md' >
-        <ul className='font-dms text-[16px] text-TextColor'>
-            <li className='bottom-BorderInfoColor hover:font-bold hover:text-TextHColor'>
+        <div className='w-[250px] tablet:w-[220px] android:w-[160px] pt-[100px] mobile:w-full rounded-md' >
+        <ul className='font-dms text-[16px] text-TextColor mobile:text-center'>
+            <li className='acmenuone'>
               <NavLink to={'/account'}>
-              <Text className={'border-b py-5'} text={'Dashboard'} />
+                <Text className={'hover:font-bold hover:text-TextHColor hover:text-[16px] border-b py-5'} text={'Dashboard'} />
               </NavLink>
             </li>
-            <li className='bottom-BorderInfoColor hover:font-bold hover:text-TextHColor'>
+            <li className='hover:font-bold hover:text-TextHColor'>
               <NavLink to={"others"}>
               <Text className={'border-b py-5'} text={'Others'} />
               </NavLink>
             </li>
-            <li className='bottom-BorderInfoColor hover:font-bold hover:text-TextHColor'>
+            <li className='hover:font-bold hover:text-TextHColor'>
             <NavLink to={"donwloads"}>
               <Text className={'border-b py-5'} text={'Donwloads'} />
             </NavLink>
             </li>
-            <li className='bottom-BorderInfoColor hover:font-bold hover:text-TextHColor'>
+            <li className='hover:font-bold hover:text-TextHColor'>
               <NavLink to={"addresses"}>
               <Text className={'border-b py-5'} text={'Addresses'} />
               </NavLink>
             </li>
-            <li className='bottom-BorderInfoColor hover:font-bold hover:text-TextHColor'>
+            <li className='hover:font-bold hover:text-TextHColor'>
               <NavLink to={"accountdetails"}>
               <Text className={'border-b py-5'} text={'Account details'} />
               </NavLink>
             </li>
-            <li className='bottom-BorderInfoColor hover:font-bold hover:text-TextHColor'>
+            <li className='hover:font-bold hover:text-TextHColor'>
             <NavLink to={"logout"}>
               <Text className={'border-b py-5'} text={'Logout'} />
             </NavLink>

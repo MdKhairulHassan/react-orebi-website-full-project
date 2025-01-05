@@ -102,10 +102,10 @@ const Productdetails = () => {
 
           <Flex>
           <Anchor href={'#'}>
-            <button className={'font-dms font-bold text-[14px] text-black border-2 border-black bg-white inline-block py-4 px-[70px] mt-8'} type='button'>Add to Wish List</button>
+            <button className={'font-dms font-bold text-[14px] laptop:text-[10px] text-black border-2 border-black bg-white inline-block py-4 px-[70px] mt-8'} type='button'>Add to Wish List</button>
             </Anchor>
             <Anchor href={'#'}>
-              <button className={'font-dms font-bold text-[14px] border-2 border-black text-white bg-black inline-block py-4 px-[70px] mt-8 ml-5'} type='button'>Add to Cart</button>
+              <button className={'font-dms font-bold text-[14px] laptop:text-[10px] border-2 border-black text-white bg-black inline-block py-4 px-[70px] mt-8 ml-5'} type='button'>Add to Cart</button>
             </Anchor>
           </Flex>
 

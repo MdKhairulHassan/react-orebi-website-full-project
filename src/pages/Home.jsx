@@ -35,7 +35,33 @@ const Home = () => {
     slidesToShow: 4,
     slidesToScroll: 2,
     prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow/>,
+    nextArrow: <NextArrow />,
+    responsive: [
+      {
+        breakpoint: 991.98,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 767.98,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 575.98,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+    ]
     // arrows: true,
   };
 
@@ -134,8 +160,8 @@ const Home = () => {
       <div className='py-[70px]'>
         <Container className={'max-w-headerContainer'}>
           <Heading as={'h3'} className={'font-bold font-dms text-TextHColor text-[39px] pb-[58px] pl-2'} text={'Our Bestsellers'} />
-       <Flex className={'justify-between'}>
-            <div className='w-[24%] bg-white relative group'>
+       <Flex className={'justify-between flex-wrap'}>
+            <div className='w-[24%] tablet:w-[31%] android:w-[47%] mobile:w-full bg-white relative group'>
               <Product
                 imgSrc={productBimgone}
                 badge='New'
@@ -147,7 +173,7 @@ const Home = () => {
                 para6={'Black'}
               />
             </div>
-            <div className='w-[24%] bg-white relative group'>
+            <div className='w-[24%] tablet:w-[31%] android:w-[47%] mobile:w-full mobile:mt-20 bg-white relative group'>
               <Product
                 imgSrc={productBimgtwo}
                 badge='New'
@@ -159,7 +185,7 @@ const Home = () => {
                 para6={'Black'}
               />
             </div>
-            <div className='w-[24%] bg-white relative group'>
+            <div className='w-[24%] tablet:w-[31%] android:hidden mobile:w-full mobile:mt-20 bg-white relative group'>
               <Product
                 imgSrc={productBimgthree}
                 badge='New'
@@ -171,7 +197,7 @@ const Home = () => {
                 para6={'Black'}
               />
             </div>
-            <div className='w-[24%] bg-white relative group'>
+            <div className='w-[24%] tablet:w-[31%] tablet:hidden android:hidden mobile:w-full mobile:mt-20 bg-white relative group'>
               <Product
                 imgSrc={productBimgfour}
                 badge='New'
@@ -202,8 +228,8 @@ const Home = () => {
       <div className='pt-[70px] pb-[140px]'>
         <Container className={'max-w-headerContainer'}>
           <Heading as={'h3'} className={'font-bold font-dms text-TextHColor text-[39px] pb-[58px] pl-2'} text={'Special Offers'} />
-       <Flex className={'justify-between'}>
-            <div className='w-[24%] bg-white relative group'>
+       <Flex className={'justify-between flex-wrap'}>
+            <div className='w-[24%] tablet:w-[31%] android:w-[47%] mobile:w-full bg-white relative group'>
               <Product
                 imgSrc={productSimgone}
                 badge='New'
@@ -215,7 +241,7 @@ const Home = () => {
                 para6={'Black'}
               />
             </div>
-            <div className='w-[24%] bg-white relative group'>
+            <div className='w-[24%] tablet:w-[31%] android:w-[47%] mobile:w-full mobile:mt-20 bg-white relative group'>
               <Product
                 imgSrc={productSimgtwo}
                 badge='New'
@@ -227,7 +253,7 @@ const Home = () => {
                 para6={'Black'}
               />
             </div>
-            <div className='w-[24%] bg-white relative group'>
+            <div className='w-[24%] tablet:w-[31%] android:hidden mobile:w-full mobile:mt-20 bg-white relative group'>
               <Product
                 imgSrc={productSimgthree}
                 badge='New'
@@ -239,7 +265,7 @@ const Home = () => {
                 para6={'Black'}
               />
             </div>
-            <div className='w-[24%] bg-white relative group'>
+            <div className='w-[24%] tablet:w-[31%] tablet:hidden android:hidden mobile:w-full mobile:mt-20 bg-white relative group'>
               <Product
                 imgSrc={productSimgfour}
                 badge='New'

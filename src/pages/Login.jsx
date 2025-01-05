@@ -13,8 +13,8 @@ const Login = () => {
       <Container className={'max-w-headerContainer py-[120px]'}>
       {/* Login Header Part Start */}
         <div>
-          <Heading as={'h3'} className={'text-TextHColor text-[49px] font-dms font-bold'} text={'Login'} />
-          <Flex className={'items-center gap-x-2'}>
+          <Heading as={'h3'} className={'text-TextHColor text-[49px] font-dms font-bold mobile:text-center'} text={'Login'} />
+          <Flex className={'items-center gap-x-2 mobile:justify-center'}>
             <Link to={'/'}>
             <Heading as={'h5'} className={'font-dms text-TextColor text-[12px]'} text={'Home'} />
             </Link>
@@ -28,25 +28,25 @@ const Login = () => {
 
         {/* Login Description Text Part Start */}
         <div className='pt-[100px]'>
-          <Text className={'font-dms text-TextColor text-[16px] pr-[545px] pb-10 border-b'} text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the."} />
+          <Text className={'font-dms text-TextColor text-[16px] pr-[545px] tablet:pr-[345px] android:pr-[240px] pb-10 border-b mobile:pr-0 mobile:text-center'} text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the."} />
         </div>
         {/* Login Description Text Part End */}
         
         {/* Login Customer Form Part Start */}
         <div className='pt-[100px] pb-[50px]'>
-          <Text className={'font-dms font-bold text-TextHColor text-[39px]'} text={"Returning Customer"} />
+          <Text className={'font-dms font-bold text-TextHColor text-[39px] mobile:text-[30px]'} text={"Returning Customer"} />
           <Flex className='pt-[30px]'>
-          <div className='w-1/3'>
+          <div className='w-1/3 mobile:w-[45%]'>
           <label for="email" className="text-TextHColor text-[16px] font-dms font-bold">Email address</label>
           <input className='w-full pb-4 pt-3 border-b' type="email" placeholder='company@domain.com'/>
           </div>
-          <div className='w-1/3 pl-10'>
+          <div className='w-1/3 mobile:w-[45%] mobile:pl-5 pl-10'>
           <label for="Password" className="text-TextHColor text-[16px] font-dms font-bold">Password</label>
           <input className='w-full pb-4 pt-3 border-b' type="password" placeholder='●●●●●●●●'/>
           </div>
           </Flex>
           <Anchor href={'#'}>
-            <button className={'font-dms font-bold text-[14px] border-2 border-black text-black bg-white inline-block py-4 px-20 mt-8'} type='submit'>Log in</button>
+            <button className={'font-dms font-bold text-[14px] border-2 border-black text-black bg-white inline-block py-4 px-20 mt-8 mobile:ml-[50px]'} type='submit'>Log in</button>
         </Anchor>
         </div>
         {/* Login Customer Form Part End */}
@@ -55,10 +55,10 @@ const Login = () => {
         <div className='pt-[50px] border-t'>
           <Text className={'font-dms font-bold text-TextHColor text-[39px]'} text={"New Customer"} />
           <div className='pt-[30px]'>
-          <Text className={'font-dms text-TextColor text-[16px] pr-[545px] pb-8'} text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the."} />
+          <Text className={'font-dms text-TextColor text-[16px] pr-[545px] android:pr-[240px] tablet:pr-[300px] mobile:pr-0 pb-8'} text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the."} />
           </div>
           <Link to={'/signup'}>
-            <button className={'font-dms font-bold text-[14px] text-white bg-black inline-block py-4 px-[70px] mt-8'} type='button'>Continue</button>
+            <button className={'font-dms font-bold text-[14px] text-white bg-black inline-block py-4 px-[70px] mt-8 mobile:ml-[50px]'} type='button'>Continue</button>
         </Link>
         </div>
         {/* Login New Customer Part End */}

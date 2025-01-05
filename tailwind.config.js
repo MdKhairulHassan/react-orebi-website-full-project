@@ -22,11 +22,31 @@ export default {
       },
       maxWidth: {
         'headerContainer': '1200px',
+        'laptopContainer': '948px',
+        'tabletContainer': '738px',
+        'androidContainer': '546px',
+        'mobileContainer': '300px',
       },
       backgroundImage: {
         'banner': "url('./assets/banner.png')",
         'Adspart2': "url('./assets/Ads_part2.png')",
       },
+      screens: {
+      'laptop': {'min': '992px', 'max': '1220.98px',},
+      // => @media (min-width: 992px) { ... }
+
+      'tablet': {'min': '768px', 'max': '991.98px',},
+      // => @media (min-width: 768px) { ... }
+
+      'android': {'min': '576px', 'max': '767.98px',},
+      // => @media (min-width: 576px) { ... }
+
+      'mobile': {'min': '320px', 'max': '575.98px',},
+      // => @media (min-width: 320px) { ... }
+
+      // 'sm': {'min': '100px', 'max': '319.98px',},
+      // // => @media (min-width: 100px) { ... }
+     },
     },
   },
   plugins: [],

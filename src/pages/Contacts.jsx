@@ -12,8 +12,8 @@ const Contacts = () => {
       <Container className={'max-w-headerContainer py-[120px]'}>
       {/* Contact Header Part Start */}
         <div>
-          <Heading as={'h3'} className={'text-TextHColor text-[49px] font-dms font-bold'} text={'Contacts'} />
-          <Flex className={'items-center gap-x-2'}>
+          <Heading as={'h3'} className={'text-TextHColor text-[49px] font-dms font-bold mobile:text-center'} text={'Contacts'} />
+          <Flex className={'items-center gap-x-2 mobile:justify-center'}>
             <Link to={'/'}>
             <Heading as={'h5'} className={'font-dms text-TextColor text-[12px]'} text={'Home'} />
             </Link>
@@ -42,7 +42,7 @@ const Contacts = () => {
           <input className='w-full pb-20 pt-3 border-b' type="text" placeholder='Your message here'/>
           </div>
           <Anchor href={'#'}>
-            <button className={'font-dms font-bold text-[14px] text-white bg-black inline-block py-4 px-24 mt-8'} type='submit'>Post</button>
+            <button className={'font-dms font-bold text-[14px] text-white bg-black inline-block py-4 px-24 mt-8 mobile:ml-[40px]'} type='submit'>Post</button>
         </Anchor>
         </div>
         {/* Contact Form Part End */}

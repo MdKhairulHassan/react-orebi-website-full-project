@@ -6,11 +6,16 @@ import Container from '../components/Container'
 import Flex from '../components/Flex'
 import Heading from '../components/Heading';
 import { FaSearch, FaUser, FaShoppingCart } from "react-icons/fa";
-import { TiArrowSortedDown } from "react-icons/ti";
+import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
 import Text from '../components/Text';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Category = ({ paraOne, paraTwo, paraThree, paraFour, paraFive, paraSix, paraSeven }) => {
+
+  const [isOpen, setIsOpen] = useState(false);
+    const toggleNavbar = () => {
+      setIsOpen(!isOpen);
+    };
   
   const [hidden, setHidden] = useState(false);
   const [hide, setHide] = useState(false);
@@ -21,15 +26,15 @@ const Category = ({ paraOne, paraTwo, paraThree, paraFour, paraFive, paraSix, pa
    <div className='bg-CategoryBG py-[25px] border-BorderColor border-y'>
     <Container className={'max-w-headerContainer'}>
      <Flex>
-       <Flex className={'w-[20%] gap-2 items-center'}>
+       <Flex className={'w-[20%] android:w-[50%] mobile:w-[55%] gap-2 items-center'}>
               <OutsideClickHandler onOutsideClick={() => { setHidden(false); }}>
                 <Flex className={'items-center relative'}>
-                  <HiMenuAlt2 className='cursor-pointer' onClick={() => setHidden(!hidden)} />
+                  <HiMenuAlt2 className='cursor-pointer android:text-[20px]' onClick={() => setHidden(!hidden)} />
                   <div onClick={() => setHidden(!hidden)}>
-                  <Heading as={'h4'} className={'font-dms text-[14px] pl-2 text-TextHColor cursor-pointer'} text={paraOne} />
+                  <Heading as={'h4'} className={'font-dms text-[14px] pl-2 text-TextHColor cursor-pointer android:text-[20px] mobile:text-[17px]'} text={paraOne} />
                   </div>
                   {hidden && (
-                  <div className='bg-black p-4 w-[230px] absolute top-[40px] rounded-md' >
+                  <div className='bg-black p-4 w-[230px] laptop:w-[200px] tablet:w-[180px] android:w-[190px] mobile:w-[180px] absolute top-[40px] rounded-md' >
                   <ul className='font-dms text-[16px] text-TextColor'>
                     <li className='border-b py-5 px-3 bottom-BorderInfoColor hover:text-white'><Text text={paraTwo}/></li>
                     <li className='border-b py-5 px-3 bottom-BorderInfoColor hover:text-white'><Text text={paraThree}/></li>
@@ -43,18 +48,20 @@ const Category = ({ paraOne, paraTwo, paraThree, paraFour, paraFive, paraSix, pa
                 </Flex>
               </OutsideClickHandler>
             </Flex>
-            <div className='w-[60%] relative'>
+            <div className='w-[60%] tablet:w-[55%] android:hidden mobile:hidden relative'>
               <input className='w-full p-3' type="text" placeholder='Search Products'/><FaSearch  className='absolute top-[50%] translate-y-[-50%] right-4'/>
             </div>
-            <Flex className={'w-[20%] items-center justify-end'}>
+            <Flex className={'w-[20%] items-center justify-end tablet:justify-center android:w-[50%] mobile:w-[45%]'}>
               <OutsideClickHandler onOutsideClick={() => { setHide(false); }}>
                 <Flex className={'items-center relative'}>
-                  <div className='cursor-pointer flex' onClick={() => setHide(!hide)}>
-                    <FaUser className='mr-1' />
-                    <TiArrowSortedDown className='mr-9' />
+                  <div onClick={toggleNavbar}>
+                  <div className='cursor-pointer flex' onClick={() => setHide(!hide)} >
+                    <FaUser className='mr-1 tablet:mr-0 tablet:ml-1 android:mr-0 android:text-[30px] mobile:mr-0 mobile:text-[30px]' />
+                    {isOpen ? <TiArrowSortedUp className='mr-9 android:text-[30px] mobile:text-[30px] mobile:mr-3' /> : <TiArrowSortedDown className='mr-9 android:text-[30px] mobile:text-[30px] mobile:mr-3' />}
+                  </div>
                   </div>
                   {hide && (
-                  <div className='bg-white w-[230px] absolute top-[40px] left-[-200px] rounded-md' >
+                  <div className='bg-white w-[230px] laptop:w-[200px] tablet:w-[150px] tablet:left-[-100px] android:w-[190px] absolute top-[40px] left-[-150px] android:left-[-130px] mobile:w-[180px] mobile:left-[-130px] rounded-md' >
                   <ul className='font-dms text-[16px] text-TextColor'>
                   <Link to={'/account'}>
                   <li className='border-b py-5 bottom-BorderInfoColor text-center rounded-md hover:bg-black hover:text-white' ><Text text={'Account'} /></li>
@@ -76,10 +83,10 @@ const Category = ({ paraOne, paraTwo, paraThree, paraFour, paraFive, paraSix, pa
               <OutsideClickHandler onOutsideClick={() => { setHide1(false); }}>
                 <Flex className={'items-center relative'}>
                   <div className='cursor-pointer flex' onClick={() => setHide1(!hide1)}>
-                    <FaShoppingCart />
+                    <FaShoppingCart className='android:text-[30px] mobile:text-[30px]' />
                   </div>
                   {hide1 && (
-                  <div className='bg-white w-[230px] absolute top-[40px] left-[-200px] rounded-md' >
+                  <div className='bg-white w-[230px] laptop:w-[200px] tablet:w-[150px] tablet:left-[-100px] android:w-[170px] absolute top-[40px] left-[-180px] android:left-[-140px] mobile:w-[180px] mobile:left-[-150px] rounded-md' >
                   <ul className='font-dms text-[16px] text-TextColor'>
                   <Link to={'cart'}>    
                   <li className='border-b py-5 bottom-BorderInfoColor text-center rounded-md hover:bg-black hover:text-white' ><Text text={'Cart'}/></li>
