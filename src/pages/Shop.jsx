@@ -209,10 +209,12 @@ const Shop = () => {
           
           {/* Pagination Part Start */}
           <div className='w-9/12 mobile:w-full pt-[100px] mobile:pt-[80px]'>
-          <Flex className={'items-center android:flex-wrap mobile:flex-wrap'}>
-              <MdWindow className='bg-TextHColor text-white text-[20px] android:text-[40px] border-4 tablet:ml-[15px] android:ml-[50px] border-TextHColor mobile:text-[30px]' />
+            <Flex className={'items-center android:flex-wrap mobile:flex-wrap'}>
+              <div className='flex mobile:w-full android:w-full android:pb-5 items-center mobile:pb-5'>
+              <MdWindow className='bg-TextHColor text-white text-[20px] android:text-[40px] border-4 tablet:ml-[15px] android:ml-[80px] border-TextHColor mobile:text-[30px]' />
               <TfiMenuAlt className='border p-[5px] android:text-[40px] text-[25px] mobile:text-[33px] mobile:ml-[10px] ml-3' />
-              <Flex className={"items-center pl-[380px] laptop:pl-[200px] tablet:pl-[95px] android:pl-[25px] mobile:pl-[54px] mobile:ml-[0px]"}>
+              </div>
+              <Flex className={"items-center pl-[380px] laptop:pl-[200px] tablet:pl-[95px] android:pl-[80px] mobile:pl-[0px] mobile:ml-[0px] mobile:w-full android:w-full"}>
             <Heading as={"h6"} text={"Sort by:"} className={"font-dms text-[16px] mobile:text-[12px] text-TextColor"} />
             <Flex className='border my-[20px] ml-[10px] items-center'>
               <Text className={'py-[5px] px-5 tablet:px-3 text-TextColor'} text={"Featured"} />
@@ -220,7 +222,7 @@ const Shop = () => {
             </Flex>
               </Flex>
               
-              <Flex className={"items-center pl-[30px] android:pl-[225px] mobile:pl-[159px]"}>
+              <Flex className={"items-center pl-[30px] android:pl-[80px] android:w-full mobile:pl-[0px] mobile:w-full"}>
             <Heading as={"h6"} text={"Show:"} className={"font-dms text-[16px] text-TextColor"} />
             <Flex className='border my-[20px] ml-[10px] items-center'>
               <Text className={'py-[5px] px-5 tablet:px-3 text-TextColor'} text={"36"} />

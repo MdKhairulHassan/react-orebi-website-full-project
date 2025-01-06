@@ -21,8 +21,8 @@ const Productdetails = () => {
     <Container className={'max-w-headerContainer py-[120px]'}>
       {/* Productdetails Header Part Start */}
       <div>
-        <Heading as={'h3'} className={'text-TextHColor text-[49px] font-dms font-bold'} text={'Product details'} />
-        <Flex className={'items-center gap-x-2'}>
+        <Heading as={'h3'} className={'text-TextHColor text-[49px] font-dms font-bold mobile:text-center'} text={'Product details'} />
+        <Flex className={'items-center gap-x-2 mobile:justify-center'}>
           <Link to={'/'}>
           <Heading as={'h5'} className={'font-dms text-TextColor text-[12px]'} text={'Home'} />
           </Link>
@@ -52,7 +52,7 @@ const Productdetails = () => {
         {/* Productdetails Image Part End */}
         
         {/* Productdetails Text Part Start */}
-        <div className='pt-[40px] w-1/2'>
+        <div className='pt-[40px] w-1/2 mobile:w-full'>
           
           <Heading as={"h3"} text={"Product"} className={"font-dms font-bold text-[39px] text-TextHColor"} />
           <Flex className={"text-StarColor pt-2"}>
@@ -100,12 +100,12 @@ const Productdetails = () => {
             <Heading as={"h6"} text={"In stock"} className={"font-dms text-[16px] text-TextColor pl-6"} />
           </Flex>
 
-          <Flex>
+          <Flex className={'mobile:w-full'}>
           <Anchor href={'#'}>
-            <button className={'font-dms font-bold text-[14px] laptop:text-[10px] text-black border-2 border-black bg-white inline-block py-4 px-[70px] mt-8'} type='button'>Add to Wish List</button>
+            <button className={'font-dms font-bold text-[14px] laptop:text-[10px] text-black border-2 border-black bg-white inline-block py-4 px-[70px] mt-8 tablet:px-[20px] tablet:text-[10px] android:text-[10px] android:px-[10px] mobile:px-[15px] mobile:text-[12px]'} type='button'>Add to Wish List</button>
             </Anchor>
             <Anchor href={'#'}>
-              <button className={'font-dms font-bold text-[14px] laptop:text-[10px] border-2 border-black text-white bg-black inline-block py-4 px-[70px] mt-8 ml-5'} type='button'>Add to Cart</button>
+              <button className={'font-dms font-bold text-[14px] laptop:text-[10px] border-2 border-black text-white bg-black inline-block py-4 px-[70px] mt-8 ml-5 mobile:ml-1 tablet:px-[40px] tablet:text-[10px] android:text-[10px] android:px-[25px] mobile:px-[25px] mobile:text-[12px]'} type='button'>Add to Cart</button>
             </Anchor>
           </Flex>
 
@@ -166,7 +166,7 @@ const Productdetails = () => {
           <input className='w-full pb-20 pt-3 border-b' type="text" placeholder='Your review here'/>
           </div>
           <Anchor href={'#'}>
-            <button className={'font-dms font-bold text-[14px] text-white bg-black inline-block py-4 px-24 mt-8'} type='submit'>Post</button>
+            <button className={'font-dms font-bold text-[14px] text-white bg-black inline-block py-4 px-24 mt-8 mobile:ml-[40px]'} type='submit'>Post</button>
         </Anchor>
         </div>
         {/* Productdetails Form Part End */}
