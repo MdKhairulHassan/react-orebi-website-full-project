@@ -8,9 +8,17 @@ import { X } from 'lucide-react';
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useState} from 'react'
 import { FaSearch } from 'react-icons/fa'
+import { useDispatch } from 'react-redux'
+import { bread } from '../slices/breadCrumb'
 
 const Header = ({ imgSrc, imgAlt, menuone, menutwo, menuthree, menufour }) => {
-  
+
+  let dispatch = useDispatch()
+  let handelClick = (item) => {
+    dispatch(bread(item))
+  }
+
+
   const [isOpen, setIsOpen] = useState(false);
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -41,16 +49,16 @@ const Header = ({ imgSrc, imgAlt, menuone, menutwo, menuthree, menufour }) => {
             </div>
             <Menu className='flex w-[70%] pl-8 mobile:hidden android:hidden android:pt-[60px] android:pl-[0px] android:w-full android:text-center'>
               <li className={'hover:font-bold hover:text-TextHColor android:hover:bg-slate-400 px-5'}>
-              <NavLink to={'/'}>{menuone}</NavLink>
+              <NavLink onClick={()=>handelClick("home")} to={'/'} className={({isActive}) => `${isActive ? "font-bold text-red-950" : ""}`}>{menuone}</NavLink>
               </li>
               <li className='hover:font-bold hover:text-TextHColor android:hover:bg-slate-400 px-5'>
-              <NavLink to={'/shop'}>{menutwo}</NavLink>
+              <NavLink onClick={()=>handelClick("shop")} to={'/shop'} className={({isActive}) => `${isActive ? "font-bold text-red-950" : ""}`}>{menutwo}</NavLink>
               </li>
               <li className='hover:font-bold hover:text-TextHColor android:hover:bg-slate-400 px-5'>
-              <NavLink to={'/about'}>{menuthree}</NavLink>
+              <NavLink onClick={()=>handelClick("about")} to={'/about'} className={({isActive}) => `${isActive ? "font-bold text-red-950" : ""}`}>{menuthree}</NavLink>
               </li>
-              <li className={'hover:font-bold hover:text-TextHColor android:hover:bg-slate-400 px-5'}>
-                <NavLink to={'/contact'} onClick={() => navigate('/', { replace: true })}>{menufour}</NavLink>
+              <li onClick={()=>handelClick("contact")} className={'hover:font-bold hover:text-TextHColor android:hover:bg-slate-400 px-5'}>
+                <NavLink to={'/contact'} onClick={() => navigate('/', { replace: true })} className={({isActive}) => `${isActive ? "font-bold text-red-950" : ""}`}>{menufour}</NavLink>
               </li>
             </Menu>
             {isOpen && ( 

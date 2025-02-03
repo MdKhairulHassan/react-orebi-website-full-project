@@ -5,8 +5,13 @@ import Flex from '../components/Flex'
 import { Link } from 'react-router-dom'
 import { RiArrowRightSLine } from 'react-icons/ri'
 import Anchor from '../components/Anchor'
+import { useSelector } from 'react-redux'
 
 const Contacts = () => {
+
+  let data2 = useSelector(state => (state.breadCrumb.dayBeforeYesterday))
+  let data=useSelector(state=>(state.breadCrumb.previousValue))
+
   return (
     <>
       <Container className={'max-w-headerContainer py-[120px]'}>
@@ -14,8 +19,12 @@ const Contacts = () => {
         <div>
           <Heading as={'h3'} className={'text-TextHColor text-[49px] font-dms font-bold mobile:text-center'} text={'Contacts'} />
           <Flex className={'items-center gap-x-2 mobile:justify-center'}>
-            <Link to={'/'}>
-            <Heading as={'h5'} className={'font-dms text-TextColor text-[12px]'} text={'Home'} />
+            <Link to={data2=="home"?"/":`/${data2}`}>
+            <Heading as={'h5'} className={'font-dms text-TextColor text-[12px]'} text={`${data2}`} />
+            </Link>
+            <RiArrowRightSLine className={'text-TextColor text-[15px]'} />
+            <Link to={data=="home"?"/":`/${data}`}>
+            <Heading as={'h5'} className={'font-dms text-TextColor text-[12px]'} text={`${data}`} />
             </Link>
             <RiArrowRightSLine className={'text-TextColor text-[15px]'} />
             <Link to={'/contact'}>

@@ -11,6 +11,7 @@ import { useState } from 'react'
 import Text from '../components/Text'
 import { MdWindow } from "react-icons/md";
 import { TfiMenuAlt } from "react-icons/tfi";
+import { useSelector } from 'react-redux'
 
 const Shop = () => {
 
@@ -24,7 +25,12 @@ const Shop = () => {
       setIsOpen2(!isOpen2);
   };
   
+  
+  let data2 = useSelector(state => (state.breadCrumb.dayBeforeYesterday))
+  let data=useSelector(state=>(state.breadCrumb.previousValue))
+  
 
+  
   return (
     <div className=' pt-[100px] pb-[40px]'>
       <Container className={'max-w-headerContainer'}>
@@ -33,12 +39,18 @@ const Shop = () => {
         <div className='mobile:w-full mobile:text-center'>
           <Heading as={'h3'} className={'text-TextHColor text-[49px] font-dms font-bold '} text={'Products'} />
           <Flex className={'items-center mobile:justify-center gap-x-2'}>
-            <Link to={'/'}>
-            <Heading as={'h5'} className={'font-dms text-TextColor text-[12px]'} text={'Home'} />
+            <Link to={data2=="home"?"/":`/${data2}`}>
+            <Heading as={'h5'} className={"font-dms text-TextColor text-[12px]"} text={`${data2}`} />
             </Link>
             <RiArrowRightSLine className={'text-TextColor text-[15px]'} />
+            
+            <Link to={data=="home"?"/":`/${data}`}>
+            <Heading as={'h5'} className={"font-dms text-TextColor text-[12px]"} text={`${data}`} />
+            </Link>
+            <RiArrowRightSLine className={'text-TextColor text-[15px]'} />
+
             <Link to={'/shop'}>
-            <Heading as={'h5'} className={'font-dms text-TextColor text-[12px]'} text={'Products'} />
+            <Heading as={'h5'} className={'font-dms text-TextColor text-[12px]'} text={'Shop'} />
             </Link>
           </Flex>
         </div>
