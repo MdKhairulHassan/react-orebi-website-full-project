@@ -86,7 +86,7 @@ const Category = ({ paraOne, paraTwo, paraThree, paraFour, paraFive, paraSix, pa
                     <FaShoppingCart className='android:text-[30px] mobile:text-[30px]' />
                   </div>
                   {hide1 && (
-                  <div className='bg-white w-[230px] laptop:w-[200px] tablet:w-[150px] tablet:left-[-100px] android:w-[170px] absolute top-[40px] left-[-180px] android:left-[-140px] mobile:w-[180px] mobile:left-[-150px] rounded-md' >
+                  <div className='bg-white w-[220px] laptop:w-[200px] tablet:w-[150px] tablet:left-[-100px] android:w-[170px] absolute top-[40px] left-[-180px] android:left-[-140px] mobile:w-[180px] mobile:left-[-150px] rounded-md' >
                   <ul className='font-dms text-[16px] text-TextColor'>
                   <Link to={'cart'}>    
                   <li className='border-b py-5 bottom-BorderInfoColor text-center rounded-md hover:bg-black hover:text-white' ><Text text={'Cart'}/></li>
